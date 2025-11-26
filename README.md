@@ -1,4 +1,4 @@
-# Centro-de-descargas-personal
+# Centro de descargas personal
 Sistema automatizado de descargas de torrents con interfaz web, búsqueda integrada en múltiples sitios y organización automática de archivos.
 
 ## Grupo
@@ -15,8 +15,10 @@ Facilita la gestión de descargas de archivos grandes mediante torrents, con bú
 - 4GB RAM mínimo disponible
 - 50GB espacio en disco
 
-## Instrucciones
+## Instrucciones de instalación
 
+## Intrucciones de uso
 
 ## Capturas de Pantalla
 
+## Créditos y Recursos utilizados
