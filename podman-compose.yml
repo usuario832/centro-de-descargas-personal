@@ -1,0 +1,46 @@
+version: '3.8'
+
+networks:
+  mi-red:
+    driver: bridge
+
+services:
+  homer:
+    image: b4bz/homer:latest
+    container_name: dashboard
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./homer-config:/www/assets
+    networks:
+      - mi-red
+    restart: unless-stopped
+
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: gestion
+    ports:
+      - "9000:9000"
+    volumes:
+      - /var/run/podman/podman.sock:/var/run/docker.sock
+      - portainer-data:/data
+    networks:
+      - mi-red
+    restart: unless-stopped
+
+  jellyfin:
+    image: jellyfin/jellyfin:latest
+    container_name: media-server
+    environment:
+      - TZ=America/Santiago
+    ports:
+      - "8096:8096"
+    volumes:
+      - ./jellyfin-config:/config
+      - ./media:/media
+    networks:
+      - mi-red
+    restart: unless-stopped
+
+volumes:
+  portainer-data:
