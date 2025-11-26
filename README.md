@@ -17,6 +17,14 @@ Facilita la gestión de descargas de archivos grandes mediante torrents, con bú
 
 ## Instrucciones de instalación
 
+Variables requeridas en .env
+
+QB_USERNAME=
+QB_PASSWORD=
+QB_PORT=
+
+Cree un archivo `.env` en la raíz del proyecto y defina estas variables.
+
 ## Intrucciones de uso
 
 ## Capturas de Pantalla
