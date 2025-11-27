@@ -32,7 +32,7 @@ Contraseña: adminadmin
 
 En el archivo .env modifique los siguientes datos
 
-QB_USER=<usuario>
+QB_USER= nombre_usuario
 
-QB_PASS=<contraseña>
+QB_PASS=  ejemplo_contraseña
     
