@@ -3,8 +3,10 @@
 downloads/*
 !downloads/.gitkeep
 
-configs/*
-!configs/.gitkeep
+configs/qbittorrent/*
+configs/jackett/*
+configs/portainer/*
+
 !configs/qbittorrent/.gitkeep
 !configs/jackett/.gitkeep
 !configs/portainer/.gitkeep
