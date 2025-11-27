@@ -1,24 +1,38 @@
 # INSTALACIÓN DEL CENTRO DE DESCARGAS
 
+## Crear la carpeta .env (IMPORTANTE)
+
+1. Abra el archivo .env.example
+
+2. Copie los datos
+
+3. Crea un archivo llamado .env
+
+4. Pegue los datos
+
 ## Lanzar el contener
 
 1. Abrir la terminal en la carpeta de centro-de-descargas-personal
 
 2. En la terminal:
-- podman machine start
-- podman-compose up -d
 
-## Obtener el usuario y contraseña
-1. En la terminal:
-- podman logs centro-de-descargas
+podman machine start
 
-2. Al terminar de imprimir los resultados del código, observará una seccion como el siguiente ejemplo:
+podman-compose up -d
 
-******** Information ********
-To control qBittorrent, access the WebUI at: http://localhost:8080
-The WebUI administrator username is: admin
-The WebUI administrator password was not set. A temporary password is provided for this session: RuMQryCxM
+## Datos del Usuario
 
-- Usuario -> admin (El usuario por defecto es admin)
-- Contraseña -> RuMQryCxM (Solo es un ejemplo)
+- Por defecto
+
+Usuario: admin
+
+Contraseña: adminadmin
+
+- Si desea realizar cambios
+
+En el archivo .env modifique los siguientes datos
+
+QB_USER=<usuario>
+
+QB_PASS=<contraseña>
     
