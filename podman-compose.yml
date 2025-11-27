@@ -44,7 +44,6 @@ services:
       - "9000:9000"
     volumes:
       - ./configs/portainer:/data
-      - portainer-data:/data
     networks:
       - mi-red
     restart: unless-stopped
