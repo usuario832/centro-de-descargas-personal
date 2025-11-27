@@ -17,6 +17,8 @@ Facilita la gestión de descargas de archivos grandes mediante torrents, con bú
 
 ## Instrucciones de instalación
 
+1. Abrir la terminal en la carpeta donde se encuentra el archivo `.yml`
+
 Variables requeridas en .env
 
 QB_USERNAME=
