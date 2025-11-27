@@ -143,6 +143,6 @@ Imagen del qBittorrent corriendo en localhost:8080
 
 Imagen del Jackett corriendo en localhost:9117
 
-
+![alt text](<Captura de pantalla 2025-11-27 160750.png>)
 
 ## Créditos y Recursos utilizados
