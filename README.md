@@ -137,6 +137,12 @@ podman logs buscador-centro-de-descargas
   
 ## Capturas de Pantalla
 
+Imagen del qBittorrent corriendo en localhost:8080
+
 ![alt text](<Captura de pantalla 2025-11-27 152917.png>)
+
+Imagen del Jackett corriendo en localhost:9117
+
+
 
 ## Créditos y Recursos utilizados
