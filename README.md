@@ -2,8 +2,8 @@
 Sistema automatizado de descargas de torrents con interfaz web, búsqueda integrada en múltiples sitios y organización automática de archivos.
 
 ## Grupo
-- Fabrizio Rodriguez - 25200220
-- Leo Rimachi - 25200432
+- Fabrizio Rodriguez - 25200220@ue.edu.pe
+- Leo Rimachi - 25200432@ue.edu.pe
 
 
 ## Problema que Resuelve
