@@ -29,8 +29,8 @@ Cree un archivo `.env` en la raíz del proyecto y defina estas variables.
 
 ## Intrucciones de uso
 Iniciar el Sistema
-powershell# Navegar a la carpeta del proyecto
-  cd C:\Users\TuUsuario\Documents\centro-descargas
+Navegar a la carpeta del proyecto
+cd C:\Users\TuUsuario\Documents\centro-descargas
 
 Iniciar servicios:
   podman-compose up -d
