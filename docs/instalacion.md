@@ -1,6 +1,6 @@
 # INSTALACIÓN DEL CENTRO DE DESCARGAS
 
-## Pasos
+## Lanzar el contener
 
 1. Abrir la terminal en la carpeta de centro-de-descargas-personal
 
