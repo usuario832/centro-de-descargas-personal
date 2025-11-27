@@ -14,10 +14,12 @@ services:
       - ./configs/qbittorrent:/config
       - ./downloads:/downloads
     environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=America/Lima
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
       - WEBUI_PORT=8080
+      - WEBUI_USER=${QB_USER}
+      - WEBUI_PASS=${QB_PASS}
     networks:
       - mi-red
     restart: unless-stopped
@@ -30,9 +32,9 @@ services:
     volumes:
       - ./configs/jackett:/config
     environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=America/Lima
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
     networks:
       - mi-red
     restart: unless-stopped
