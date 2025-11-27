@@ -14,7 +14,10 @@
 
 2. Al terminar de imprimir los resultados del código, observará una seccion como el siguiente ejemplo:
 
-![alt text](image-1.png)
+******** Information ********
+To control qBittorrent, access the WebUI at: http://localhost:8080
+The WebUI administrator username is: admin
+The WebUI administrator password was not set. A temporary password is provided for this session: RuMQryCxM
 
 - Usuario -> admin (El usuario por defecto es admin)
 - Contraseña -> RuMQryCxM (Solo es un ejemplo)
