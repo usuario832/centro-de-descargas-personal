@@ -137,4 +137,6 @@ podman logs buscador-centro-de-descargas
   
 ## Capturas de Pantalla
 
+![alt text](<Captura de pantalla 2025-11-27 152917.png>)
+
 ## Créditos y Recursos utilizados
