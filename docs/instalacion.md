@@ -10,15 +10,15 @@
 
 ## Obtener el usuario y contraseña
 1. En la terminal:
-    - podman logs centro-de-descargas
+- podman logs centro-de-descargas
 
-    - Al terminar de imprimir los resultados del código, observará una seccion como el siguiente ejemplo:
+2. Al terminar de imprimir los resultados del código, observará una seccion como el siguiente ejemplo:
 
-    ******** Information ********
-    To control qBittorrent, access the WebUI at: http://localhost:8080
-    The WebUI administrator username is: admin
-    The WebUI administrator password was not set. A temporary password is provided for this session: RuMQryCxM
+******** Information ********
+To control qBittorrent, access the WebUI at: http://localhost:8080
+The WebUI administrator username is: admin
+The WebUI administrator password was not set. A temporary password is provided for this session: RuMQryCxM
 
-    - Usuario -> admin (El usuario por defecto es admin)
-    - Contraseña -> RuMQryCxM (Recuerde este es un ejemplo)
+- Usuario -> admin (El usuario por defecto es admin)
+- Contraseña -> RuMQryCxM (Solo es un ejemplo)
     
