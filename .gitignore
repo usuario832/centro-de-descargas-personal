@@ -1,4 +1,10 @@
 .env
+
+configs/qbittorrent/
+configs/jackett/
+configs/portainer/
+
 downloads/
-configs/
-backups/
+
+.DS_Store
+Thumbs.db
