@@ -65,7 +65,7 @@ Arriba a la derecha verás: API Key: [cadena larga]
 copiar
 Guardar (se usara mas adelante para conectar con el qbittorrent
 
-#Probar indexers:
+# Probar indexers:
 
 Haz clic en Test All
 Verifica que aparezcan ✅ verdes
@@ -105,6 +105,6 @@ podman logs -f centro-de-descargas
 Logs de Jackett
 podman logs buscador-centro-de-descargas
   
-##Capturas de Pantalla
+## Capturas de Pantalla
 
 ## Créditos y Recursos utilizados
