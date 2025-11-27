@@ -32,10 +32,10 @@ Iniciar el Sistema
 Navegar a la carpeta del proyecto
 cd C:\Users\TuUsuario\Documents\centro-descargas
 
-Iniciar servicios:
+#Iniciar servicios:
   podman-compose up -d
 
-Verificar estado:
+#Verificar estado:
   podman ps
 Configuración Inicial de qBittorrent
 
@@ -65,7 +65,7 @@ Arriba a la derecha verás: API Key: [cadena larga]
 copiar
 Guardar (se usara mas adelante para conectar con el qbittorrent
 
-Probar indexers:
+#Probar indexers:
 
 Haz clic en Test All
 Verifica que aparezcan ✅ verdes
