@@ -1,4 +1,4 @@
-# Centro de descargas personal
+# Centro de descargas con Qbittorent + Jackett + Portainer
 Sistema automatizado de descargas de torrents con interfaz web, búsqueda integrada en múltiples sitios y organización automática de archivos.
 
 ## Grupo

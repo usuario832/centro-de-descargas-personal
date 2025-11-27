@@ -16,7 +16,7 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=America/Santiago
+      - TZ=America/Lima
       - WEBUI_PORT=8080
     networks:
       - mi-red
@@ -32,7 +32,7 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=America/Santiago
+      - TZ=America/Lima
     networks:
       - mi-red
     restart: unless-stopped
@@ -43,7 +43,7 @@ services:
     ports:
       - "9000:9000"
     volumes:
-      - /configs/portainer:/data
+      - ./configs/portainer:/data
       - portainer-data:/data
     networks:
       - mi-red
