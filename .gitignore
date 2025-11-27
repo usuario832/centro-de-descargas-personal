@@ -1,10 +1,13 @@
 .env
 
-configs/qbittorrent/
-configs/jackett/
-configs/portainer/
+downloads/*
+!downloads/.gitkeep
 
-downloads/
+configs/*
+!configs/.gitkeep
+!configs/qbittorrent/.gitkeep
+!configs/portainer/.gitkeep
+!configs/jackett/.gitkeep
 
-.DS_Store
-Thumbs.db
+backups/*
+!backups/.gitkeep
