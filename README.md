@@ -29,36 +29,51 @@ Cree un archivo `.env` en la raíz del proyecto y defina estas variables.
 
 ## Intrucciones de uso
 Iniciar el Sistema
+
 Navegar a la carpeta del proyecto
+
 cd C:\Users\TuUsuario\Documents\centro-descargas
 
-#Iniciar servicios:
+Iniciar servicios:
+
   podman-compose up -d
 
-#Verificar estado:
+Verificar estado:
+
   podman ps
+  
 Configuración Inicial de qBittorrent
 
 Abre: http://localhost:8080
+
 Credenciales por defecto:
 
 Usuario: admin
+
 Contraseña: Ver en logs
+
 powershell  
+
   podman logs centro-de-descargas | Select-String "password"
+  
 Configuración Inicial de Jackett
 
 Abre: http://localhost:9117
-Agregar Indexers:
 
+# Agregar Indexers:
 Haz clic en + Add indexer
 Busca y agrega:
 
 °1337x
+
 °The Pirate Bay
+
 °EZTV
+
 °YTS
+
 °RARBG
+
 Copiar API Key:
 
 Arriba a la derecha verás: API Key: [cadena larga]
