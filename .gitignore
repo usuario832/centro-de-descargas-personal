@@ -6,8 +6,5 @@ downloads/*
 configs/*
 !configs/.gitkeep
 !configs/qbittorrent/.gitkeep
-!configs/portainer/.gitkeep
 !configs/jackett/.gitkeep
-
-backups/*
-!backups/.gitkeep
+!configs/portainer/.gitkeep
