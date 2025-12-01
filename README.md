@@ -9,11 +9,21 @@ Sistema automatizado de descargas de torrents con interfaz web, búsqueda integr
 ## Problema que Resuelve
 Facilita la gestión de descargas de archivos grandes mediante torrents, con búsqueda centralizada y almacenamiento organizado, todo desde una interfaz web moderna.
 
-## Requisitos Previos
-- Windows 10/11 con WSL2
+## Requisitos Previos 💻
+
+### Software:
+
+- Windows 10/11 con WSL2 
 - Podman Desktop instalado
-- 4GB RAM mínimo disponible
-- 50GB espacio en disco
+- Python 3 con pip (para instalar podman compose)
+- podman-compose
+
+### Hardware mínimo:
+
+- RAM: 4 GB (recomendado: 8 GB)
+- CPU: 2 núcleos (recomendado: 4 núcleos)
+- Disco: 10 GB libres (50 GB+ si descargas mucho)
+- Internet: Conexión activa
 
 ## Instrucciones de instalación
 
@@ -137,11 +147,11 @@ podman logs buscador-centro-de-descargas
   
 ## Capturas de Pantalla
 
-Imagen del qBittorrent corriendo en localhost:8080
+- qBittorrent
 
 ![alt text](<Captura de pantalla 2025-11-27 152917.png>)
 
-Imagen del Jackett corriendo en localhost:9117
+- Jackett
 
 ![alt text](<Captura de pantalla 2025-11-27 160750.png>)
 
