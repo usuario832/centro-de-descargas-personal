@@ -18,8 +18,8 @@ services:
       - PGID=${PGID}
       - TZ=${TZ}
       - WEBUI_PORT=8080
-      - WEBUI_USER=${QB_USER}
-      - WEBUI_PASS=${QB_PASS}
+      - QBT_WEBUI_USERNAME=${QB_USER}
+      - QBT_WEBUI_PASSWORD=${QB_PASS}
     networks:
       - mi-red
     restart: unless-stopped
@@ -46,6 +46,12 @@ services:
     networks:
       - mi-red
     restart: unless-stopped
+
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 512M
 
   portainer:
     image: portainer/portainer-ce:latest
