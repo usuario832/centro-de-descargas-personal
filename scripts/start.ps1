@@ -1,8 +1,8 @@
 # Script de inicio - Centro de Descargas Personal
 
-Write-Host "===================================" ForegroundColor Cyan
+Write-Host "===================================" -ForegroundColor Cyan
 Write-Host "Iniciando servicios..." -ForegroundColor Cyan
-Write-Host "===================================" ForegroundColor Cyan
+Write-Host "===================================" -ForegroundColor Cyan
 Write-Host ""
 
 Write-Host "Verificando archivo .env..." -ForegroundColor Yellow
