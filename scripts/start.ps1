@@ -54,3 +54,8 @@ else {
     Write-Host "podman logs centro-de-descargas" -ForegroundColor Red
     Write-Host ""
 }
+
+Write-Host "===================================" -ForegroundColor Green
+Write-Host "Hasta la vista baby" -ForegroundColor Green
+Write-Host "===================================" -ForegroundColor Green
+Write-Host ""
