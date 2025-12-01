@@ -5,6 +5,31 @@ Write-Host "Iniciando servicios..." -ForegroundColor Cyan
 Write-Host "===================================" ForegroundColor Cyan
 Write-Host ""
 
+Write-Host "Verificando archivo .env..." -ForegroundColor Yellow
+
+$rutaEnv = ".\.env"
+
+if (-not (Test-Path $rutaEnv)) {
+    Write-Host "Creando archivo .env con valores por defecto..." -ForegroundColor Yellow
+    
+    $envPordefecto = @"
+PUID=1000
+PGID=1000
+TZ=America/Lima
+
+QB_USER=admin
+QB_PASS=adminadmin
+"@
+    
+    $envPordefecto | Out-File -FilePath $rutaEnv -Encoding UTF8
+    Write-Host "Archivo .env creado correctamente" -ForegroundColor Green
+} 
+else {
+    Write-Host "Archivo .env ya existe" -ForegroundColor Green
+}
+
+Write-Host ""
+
 Write-Host "Creando carpetas..." -ForegroundColor Yellow
 
 mkdir configs 2>$null
