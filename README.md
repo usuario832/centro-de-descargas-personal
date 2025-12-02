@@ -33,17 +33,16 @@ Facilita la gestión de descargas de archivos grandes mediante torrents, con bú
 
 **Saltarse este paso si no deseas cambiar las credenciales**
 
-1. Copiar el contenido del archivo .env.example
+1. Copiar el contenido del archivo ``.env.example``
 2. Crear un archivo `.env`
-3. Pegar el contenido en el archivo nuevo archivo
+3. Pegar el contenido en el archivo ``.env``
 4. Modifica la contraseña o usuario
-5. Guardar el archivo con `ctlr + S`
+5. Guardar el archivo `Ctlr + S`
 
 - PASO 4: Ejecutar los siguiente comandos en el Powershell o WSL:
 
-#### podman machine start
-
-#### .\scripts/start.ps1
+**podman machine start**
+**.\scripts/start.ps1**
 
 - PASO 5: Copiar las credenciales
 
