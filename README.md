@@ -31,7 +31,7 @@ Facilita la gestión de descargas de archivos grandes mediante torrents, con bú
 - PASO 2: Ubicarse en la carpeta centro de descargas personal
 - PASO 3(OPCIONAL): 
 
-Saltarse este paso si no deseas cambiar las credenciales
+**Saltarse este paso si no deseas cambiar las credenciales**
 
 1. Copiar el contenido del archivo .env.example
 2. Crear un archivo `.env`
