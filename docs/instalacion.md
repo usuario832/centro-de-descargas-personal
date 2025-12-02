@@ -1,38 +1,35 @@
 # INSTALACIÓN DEL CENTRO DE DESCARGAS
 
-## Crear la carpeta .env (IMPORTANTE)
+1. Abrir Powershell o WSL
+2. Ubicarse en la carpeta centro de descargas personal
+3. Si no quiere cambiar las credenciales por defecto saltarse este paso
 
-1. Abra el archivo .env.example
+Copiar el contenido del archivo .env.example
 
-2. Copie los datos
+Crear un archivo `.env`
 
-3. Crea un archivo llamado .env
+Pegar el contenido en el archivo nuevo archivo
 
-4. Pegue los datos
+Modificar:
 
-## Lanzar el contener
+QB_USER=<usuario>
+QB_PASS=<contraseña>
 
-1. Abrir la terminal en la carpeta de centro-de-descargas-personal
+Por ultimo guardar el archivo
 
-2. En la terminal:
+4. Ejecutar los siguiente comandos:
 
 podman machine start
 
-podman-compose up -d
+.\scripts/start.ps1
 
-## Datos del Usuario
+5. Copiar las credenciales
 
-- Por defecto
+Por defecto es:
+- Usuario: admin
+- Contraseña: adminadmin
 
-Usuario: admin
-
-Contraseña: adminadmin
-
-- Si desea realizar cambios
-
-En el archivo .env modifique los siguientes datos
-
-QB_USER= nombre_usuario
-
-QB_PASS=  ejemplo_contraseña
+6. Ingresar a la web
+7. En la busqueda ingresar "localhost:8080" (sin las comillas)
+8. Ingresar las credenciales (copiadas en el paso 5)
     
