@@ -27,15 +27,38 @@ Facilita la gestión de descargas de archivos grandes mediante torrents, con bú
 
 ## Instrucciones de instalación
 
-1. Abrir la terminal en la carpeta donde se encuentra el archivo `.yml`
+1. Abrir Powershell o WSL
+2. Ubicarse en la carpeta centro de descargas personal
+3. Si no quiere cambiar las credenciales por defecto saltarse este paso
 
-Variables requeridas en .env
+Copiar el contenido del archivo .env.example
 
-QB_USERNAME=
-QB_PASSWORD=
-QB_PORT=
+Crear un archivo `.env`
 
-Cree un archivo `.env` en la raíz del proyecto y defina estas variables.
+Pegar el contenido en el archivo nuevo archivo
+
+Modificar:
+
+QB_USER=<usuario>
+QB_PASS=<contraseña>
+
+Por ultimo guardar el archivo
+
+4. Ejecutar los siguiente comandos:
+
+podman machine start
+
+.\scripts/start.ps1
+
+5. Copiar las credenciales
+
+Por defecto es:
+- Usuario: admin
+- Contraseña: adminadmin
+
+6. Ingresar a la web
+7. En la busqueda ingresar "localhost:8080" (sin las comillas)
+8. Ingresar las credenciales (copiadas en el paso 5)
 
 ## Intrucciones de uso
 Iniciar el Sistema
