@@ -27,37 +27,32 @@ Facilita la gestión de descargas de archivos grandes mediante torrents, con bú
 
 ## Instrucciones de instalación
 
-1. Abrir Powershell o WSL
-2. Ubicarse en la carpeta centro de descargas personal
-3. Si no quiere cambiar las credenciales por defecto saltarse este paso
+- PASO 1: Abrir Powershell o WSL
+- PASO 2: Ubicarse en la carpeta centro de descargas personal
+- PASO 3(OPCIONAL): 
 
-Copiar el contenido del archivo .env.example
+Saltarse este paso si no deseas cambiar las credenciales
 
-Crear un archivo `.env`
+1. Copiar el contenido del archivo .env.example
+2. Crear un archivo `.env`
+3. Pegar el contenido en el archivo nuevo archivo
+4. Modifica la contraseña o usuario
+5. Guardar el archivo con `ctlr + S`
 
-Pegar el contenido en el archivo nuevo archivo
+- PASO 4: Ejecutar los siguiente comandos en el Powershell o WSL:
 
-Modificar:
+#### podman machine start
 
-QB_USER=<usuario>
-QB_PASS=<contraseña>
+#### .\scripts/start.ps1
 
-Por ultimo guardar el archivo
-
-4. Ejecutar los siguiente comandos:
-
-podman machine start
-
-.\scripts/start.ps1
-
-5. Copiar las credenciales
+- PASO 5: Copiar las credenciales
 
 Por defecto es:
 - Usuario: admin
 - Contraseña: adminadmin
 
 6. Ingresar a la web
-7. En la busqueda ingresar "localhost:8080" (sin las comillas)
+7. En la busqueda ingresar http://localhost:9117
 8. Ingresar las credenciales (copiadas en el paso 5)
 
 ## Intrucciones de uso
