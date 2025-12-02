@@ -27,22 +27,22 @@ Facilita la gestión de descargas de archivos grandes mediante torrents, con bú
 
 ## Instrucciones de instalación
 
-- PASO 1: Abrir Powershell o WSL
-- PASO 2: Ubicarse en la carpeta centro de descargas personal
-- PASO 3(OPCIONAL): 
+### ACTIVAR CONTENEDORES
 
-**Saltarse este paso si no deseas cambiar las credenciales**
+**PASO 1: Abrir Powershell o WSL**
+**PASO 2: Ubicarse en la carpeta centro de descargas personal**
+**PASO 3 (OPCIONAL):   Saltarse este paso si no deseas cambiar las credenciales**
 
-1. Copiar el contenido del archivo ``.env.example``
-2. Crear un archivo `.env`
-3. Pegar el contenido en el archivo ``.env``
+1. Copiar el contenido del archivo  `.env.example`
+2. Crear un archivo  `.env`
+3. Pegar el contenido en el archivo  `.env`
 4. Modifica la contraseña o usuario
-5. Guardar el archivo `Ctlr + S`
+5. Guardar el archivo  `Ctlr + S`
 
 - PASO 4: Ejecutar los siguiente comandos en el Powershell o WSL:
 
-**podman machine start**
-**.\scripts/start.ps1**
+1. podman machine start
+2. .\scripts/start.ps1
 
 - PASO 5: Copiar las credenciales
 
@@ -50,9 +50,10 @@ Por defecto es:
 - Usuario: admin
 - Contraseña: adminadmin
 
-6. Ingresar a la web
-7. En la busqueda ingresar http://localhost:9117
-8. Ingresar las credenciales (copiadas en el paso 5)
+6. PASO 6: Ingresar en la web a Jackett -> http://localhost:9117
+8. PASO 7: Ingresar las credenciales (copiadas en el paso 5)
+
+### CONECTAR JACKETT CON QBITTORRENT
 
 ## Intrucciones de uso
 Iniciar el Sistema
