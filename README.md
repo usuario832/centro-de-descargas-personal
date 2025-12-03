@@ -124,6 +124,14 @@ podman-compose restart qbittorrent
 
 **Ya puedes comenzar a buscar y descargar**
 
+### Para detener los contendores
+
+**Ejectua**
+
+```powershell
+.\scripts/stop.ps1
+```
+
 ## Intrucciones de uso
 
 ## Capturas de Pantalla
