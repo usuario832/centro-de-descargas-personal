@@ -126,7 +126,9 @@ podman-compose restart qbittorrent
 
 ### Para detener los contendores
 
-**Ejectua**
+**PASO 1: Abre el Powershell en la carpeta del proyecto**
+
+1. Ejecuta:
 
 ```powershell
 .\scripts/stop.ps1
