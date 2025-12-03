@@ -41,8 +41,11 @@ Facilita la gestión de descargas de archivos grandes mediante torrents, con bú
 
 **PASO 4: Ejecuta los comandos en el Powershell:**  
 
-- podman machine start
-- .\scripts/start.ps1
+```powershell
+podman machine start
+
+.\scripts/start.ps1
+```
 
 **PASO 5: Copia las credenciales**
 
@@ -70,12 +73,12 @@ Por defecto es:
 - **RARBG**
 - **YTS**
 
-3. Haz clic en el "+" al lado de cada uno para añadirlos
+3. Haz clic en el **"+"** al lado de cada uno para añadirlos
 
 **PASO 4: Descargar el plugin de búsqueda en qBittorrent**
 
-1. Abre la web y ingresa a **https://raw.githubusercontent.com/qbittorrent/search-plugins/master/nova3/engines/jackett.py**  
-2. Guarda el archivo `Ctrl + S`
+1. Abre la web y ingresa a https://raw.githubusercontent.com/qbittorrent/search-plugins/master/nova3/engines/jackett.py
+2. Guarda el archivo  `Ctrl + S`
 - Nómbralo: jackett.py 
 
 **PASO 5: Copiar el plugin en la carpeta correcta**
@@ -86,7 +89,7 @@ Por defecto es:
 -  **configs\qbittorrent\qBittorrent\nova3\engines**
 4. Copia el archivo  `jackett.py`  en la carpeta engines
 5. Crea un archivo llamado  `jackett.json`
-6. Abre el archivo `jackett.json` con bloc de notas
+6. Abre el archivo  `jackett.json`  con bloc de notas
 7. Pega lo siguiente:
 
 ```json
@@ -108,48 +111,21 @@ Por defecto es:
 }
 ```
 
-9. Guarda el archivo `Ctlr + S` o cierralo
+9. Guarda el archivo  `Ctlr + S`  o cierralo
 
 **PASO 6: Abre el Powershell en la carpeta del proyecto**
 1. Ejecuta:
-- podman-compose restart qbittorrent
+
+```powershell
+podman-compose restart qbittorrent
+```
 
 **PASO 7: Abre la web y ve a qBittorrent -> http://localhost:8080**
 
 **Ya puedes comenzar a buscar y descargar**
 
 ## Intrucciones de uso
-Iniciar el Sistema
 
-Navegar a la carpeta del proyecto
-
-cd C:\Users\TuUsuario\Documents\centro-descargas
-
-Iniciar servicios:
-
-  podman-compose up -d
-
-Verificar estado:
-
-  podman ps
-  
-Configuración Inicial de qBittorrent
-
-Abre: http://localhost:8080
-
-Credenciales por defecto:
-
-Usuario: admin
-
-Contraseña: Ver en logs
-
-powershell  
-
-  podman logs centro-de-descargas | Select-String "password"
-  
-Configuración Inicial de Jackett
-
-Abre: http://localhost:9117
 
 # Agregar Indexers:
 Haz clic en + Add indexer
