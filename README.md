@@ -29,8 +29,9 @@ Facilita la gestión de descargas de archivos grandes mediante torrents, con bú
 
 ### ACTIVAR CONTENEDORES
 
-**PASO 1: Abrir Powershell o WSL**
+**PASO 1: Abrir Powershell o WSL**  
 **PASO 2: Ubicarse en la carpeta centro de descargas personal**
+
 **PASO 3 (OPCIONAL):   Saltarse este paso si no deseas cambiar las credenciales**
 
 1. Copiar el contenido del archivo  `.env.example`
