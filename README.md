@@ -89,6 +89,7 @@ Por defecto es:
 6. Abre el archivo `jackett.json` con bloc de notas
 7. Pega lo siguiente:
 
+```json
    {  
        "api_key": "PEGA_AQUI_TU_API_KEY",  
        "tracker_first": false,  
@@ -97,11 +98,13 @@ Por defecto es:
 
 8. Reemplaza `PEGA_AQUI_TU_API_KEY` con la API Key que copiaste en el paso 2, ejemplo:
 
-   {  
-       "api_key": "a1b2c3d4e5f6g7h8i9j0",  
-       "tracker_first": false,  
-       "url": "http://jackett:9117"  
-   }  
+```json
+{
+    "api_key": "a1b2c3d4e5f6g7h8i9j0",
+    "thread_count": 20,
+    "tracker_first": false,
+    "url": "http://jackett:9117"
+}
 
 9. Guarda el archivo `Ctlr + S` o cierralo
 
