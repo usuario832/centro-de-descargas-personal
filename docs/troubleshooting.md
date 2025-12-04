@@ -68,7 +68,7 @@ Nombre de usuario o contraseña inválidos.
 Respuesta del servidor: Fails.  
 ```
 
-![Error de inicio de sesión](demo/credencialesqbittorrent.png)
+![Error de inicio de sesión](imagenes/credencialesqbittorrent.png)
 
 Causa:
 No sabíamos cuáles eran las credenciales por defecto. La imagen de LinuxServer/qBittorrent permite configurar usuario y contraseña mediante variables de entorno, pero si no se configuran correctamente, usa valores internos que desconocíamos.
@@ -131,7 +131,7 @@ El prefijo correcto para las variables de entorno de qBittorrent en la imagen de
 ## ❌ Problema 3: No aparecen resultados al buscar en qBittorrent
 Tuvimos este problema al intentar buscar torrents para descargar
 
-![Error al intentar buscar torrents](demo/errordebusqueda.png)
+![Error al intentar buscar torrents](imagenes/errordebusqueda.png)
 
 ### Síntoma
 Al intentar buscar torrents en qBittorrent:
