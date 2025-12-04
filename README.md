@@ -194,11 +194,11 @@ podman stats
 
 - qBittorrent - Interfaz principal
 
-![qBittorrent Interface](demo/qbittorrent.png)
+![qBittorrent Interface](demo/imagenes/qbittorrent.png)
 
 - Jackett - Panel de indexadores
 
-![Jackett Dashboard](demo/jackett.png)
+![Jackett Dashboard](docs/imagenes/jackett.png)
 
 ## 🙏 Créditos y Recursos utilizados
 
