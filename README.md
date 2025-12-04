@@ -128,6 +128,7 @@ Por defecto es:
 
 ```powershell
 podman-compose restart qbittorrent
+```
 
 **PASO 7: Abre la web y ve a qBittorrent -> http://localhost:8080**
 
