@@ -127,8 +127,7 @@ Por defecto es:
 1. Ejecuta:
 
 ```powershell
-podman-compose restart centro-de-descargas
-```
+podman-compose restart qbittorrent
 
 **PASO 7: Abre la web y ve a qBittorrent -> http://localhost:8080**
 
