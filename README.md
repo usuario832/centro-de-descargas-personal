@@ -87,6 +87,16 @@ Por defecto es:
 2. Navega al proyecto
 3. Entra a la carpeta engines   
 -  **configs\qbittorrent\qBittorrent\nova3\engines**
+
+- Si en caso aún no se creo la carpeta  `nova3`
+
+    - Ejecutar
+
+    ```powershell
+        New-Item -ItemType Directory -Force -Path .\configs\qbittorrent\qBittorrent\nova3\engines
+    ```
+    - Verificar y seguir con los pasos
+
 4. Copia el archivo  `jackett.py`  en la carpeta engines
 5. Crea un archivo llamado  `jackett.json` en la misma carpeta
 6. Abre el archivo  `jackett.json`  con bloc de notas
