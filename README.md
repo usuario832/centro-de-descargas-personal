@@ -10,7 +10,7 @@ Sistema automatizado de descargas de torrents con interfaz web, búsqueda integr
 Facilita la gestión de descargas de archivos grandes mediante torrents, con búsqueda centralizada y almacenamiento organizado, todo desde una interfaz web moderna.
 
 ## 💻 Requisitos Previos
-
+https://www.canva.com/design/DAG6fHxqVxY/82TIWV7UpjorEPHebbt2RQ/edit?utm_content=DAG6fHxqVxY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 ### Software:
 
 - Windows 10/11 con WSL2 
