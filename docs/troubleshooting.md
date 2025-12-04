@@ -18,7 +18,7 @@ pip install podman-compose
 El problema es que el directorio Scripts de Python no está en el PATH. Encontré mi ruta ejecutando:
 
 ```powershell
-powershellpython -m site --user-site
+python -m site --user-site
 ```
 
 Luego cambié site-packages por Scripts en esa ruta. Por ejemplo:
@@ -48,7 +48,7 @@ $env:Path += ";C:\Users\TuUsuario\AppData\Roaming\Python\Python311\Scripts"
 Verificar
 
 ```powershell
-powershellpodman-compose --version
+podman-compose --version
 ```
 
 Alternativa
@@ -56,7 +56,7 @@ Alternativa
 También se puede ejecutar directamente con Python sin modificar el PATH:
 
 ```powershell
-powershellpython -m podman_compose --version
+python -m podman_compose --version
 ```
 
 ## ❌ Problema 2: "Nombre de usuario o contraseña inválidos" en qBittorrent
@@ -82,7 +82,7 @@ Solución:
 Revisé los logs del contenedor para encontrar pistas:
 
 ```powershell
-powershellpodman logs centro-de-descargas
+podman logs centro-de-descargas
 ```
 
 Descubrí que las variables de entorno estaban mal configuradas en el podman-compose.yml. Tenía:
@@ -114,13 +114,13 @@ QB_PASS=tu_contraseña_segura
 Recreé el contenedor para aplicar los cambios:
 
 ```powershell
-powershellpodman-compose down
+podman-compose down
 podman-compose up -d
 ```
 
 Ahora pude acceder con las credenciales definidas en el .env:
 
-Usuario: admin
+Usuario: admin  
 Contraseña: adminadmin
 
 Lección aprendida:
