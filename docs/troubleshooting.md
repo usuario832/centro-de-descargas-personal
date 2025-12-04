@@ -1,96 +1,127 @@
 # 🔧 Troubleshooting - Problemas y Soluciones
 Este documento detalla los problemas encontrados durante el desarrollo del proyecto y cómo los resolvimos.
 
-## ❌ Problema 1: "Nombre de usuario o contraseña inválidos" en qBittorrent
-Síntoma:
+## ❌ Problema 1: Problemas con podman-compose
+
+Tuve un problema donde  `podman-compose --version`  no funcionaba en PowerShell y es uno de los requisitos principales para levantar contenedores.
+
+### **Aquí está la solución:**
+
+**Instalar podman-compose**
+
+```powershell
+pip install podman-compose
+```
+
+**Agregar al PATH**
+
+El problema es que el directorio Scripts de Python no está en el PATH. Encontré mi ruta ejecutando:
+
+```powershell
+powershellpython -m site --user-site
+```
+
+Luego cambié site-packages por Scripts en esa ruta. Por ejemplo:
+
+Si sale: 
+
+**C:\Users\TuUsuario\AppData\Roaming\Python\Python311\site-packages**
+
+Usa: 
+
+**C:\Users\TuUsuario\AppData\Roaming\Python\Python311\Scripts**
+
+
+**Para agregarlo al PATH permanentemente:**
+
+1. Busca "Variables de entorno" en Windows
+2. Editar la variable Path del usuario
+3. Agregar la ruta del directorio Scripts
+4. Reiniciar PowerShell
+
+O agregar temporalmente en la sesión actual:
+
+```powershell
+$env:Path += ";C:\Users\TuUsuario\AppData\Roaming\Python\Python311\Scripts"
+```
+
+Verificar
+
+```powershell
+powershellpodman-compose --version
+```
+
+Alternativa
+
+También se puede ejecutar directamente con Python sin modificar el PATH:
+
+```powershell
+powershellpython -m podman_compose --version
+```
+
+## ❌ Problema 2: "Nombre de usuario o contraseña inválidos" en qBittorrent
+
 Al intentar acceder a la interfaz web de qBittorrent en http://localhost:8080, aparecía:
+
+```
 Nombre de usuario o contraseña inválidos.
-Respuesta del servidor: Fails.
-Mostrar imagen
+Respuesta del servidor: Fails.  
+```
+
 Causa:
 No sabíamos cuáles eran las credenciales por defecto. La imagen de LinuxServer/qBittorrent permite configurar usuario y contraseña mediante variables de entorno, pero si no se configuran correctamente, usa valores internos que desconocíamos.
+
 Intentos fallidos:
 
-Probamos: admin/admin
-Probamos: admin/adminadmin
-Probamos: las credenciales del archivo .env pero no funcionaban
+- Probamos: admin/admin
+- Probamos: admin/adminadmin
+- Probamos las credenciales del archivo .env pero no funcionaban
 
 Solución:
 
-Revisamos los logs del contenedor para encontrar pistas:
+Revisé los logs del contenedor para encontrar pistas:
 
-bashpodman logs centro-de-descargas
+```powershell
+powershellpodman logs centro-de-descargas
+```
 
-Descubrimos que las variables WEBUI_USER y WEBUI_PASS no estaban siendo leídas correctamente porque:
+Descubrí que las variables de entorno estaban mal configuradas en el podman-compose.yml. Tenía:
+```yml
+environment:
+  - WEBUI_USERNAME=${QB_USER}
+  - WEBUI_PASSWORD=${QB_PASS}
+```
 
-En el compose.yml usábamos ${QB_USER} y ${QB_PASS}
-Pero en el .env las definimos como QB_USERNAME y QB_PASSWORD
-¡No coincidían!
+Investigué la documentación de la imagen y descubrí que las variables correctas son con el prefijo  `QBT_ `
+**Corregí el podman-compose.yml:**
 
+```yml
+environment:
+  - QBT_WEBUI_USERNAME=${QB_USER}
+  - QBT_WEBUI_PASSWORD=${QB_PASS}
+```
 
-Corregimos el compose.yml para usar las variables correctas:
+Me aseguré de que mi archivo .env tuviera los valores correctos:
 
-yamlenvironment:
-  - WEBUI_USER=${QB_USERNAME:-admin}
-  - WEBUI_PASS=${QB_PASSWORD:-adminadmin}
-
-O alternativamente, actualizamos el .env para que coincidiera:
-
-bashQB_USER=admin
+```env
+envPUID=1000
+PGID=1000
+TZ=America/Lima
+QB_USER=admin
 QB_PASS=tu_contraseña_segura
+```
 
-Recreamos el contenedor para aplicar los cambios:
+Recreé el contenedor para aplicar los cambios:
 
-bashpodman-compose down
+```powershell
+powershellpodman-compose down
 podman-compose up -d
-Lección aprendida:
-Las variables de entorno deben coincidir exactamente entre el archivo .env y el compose.yml. Los contenedores no pueden "adivinar" qué variables usar. Esto refuerza el concepto de que los procesos aislados en contenedores dependen completamente de la configuración explícita que se les proporciona.
+```
 
-## ❌ Problema 2: Error al ejecutar podman-compose (CalledProcessError)
-Síntoma:
-Al intentar ejecutar podman-compose up -d, aparecía un error largo en la terminal:
-subprocess.CalledProcessError: Command 'podman ps --filter label=io.podman.compose.project=centro-de-descargas-personal...' 
-returned non-zero exit status 125.
-Mostrar imagen
-Causa:
-Este error suele ocurrir por una de estas razones:
+Ahora pude acceder con las credenciales definidas en el .env:
 
-Podman no está corriendo correctamente en Windows/WSL
-Permisos insuficientes para acceder al socket de Podman
-Versión incompatible de podman-compose con la versión de Podman instalada
-Archivos de configuración corruptos en ~/.config/containers/
-
-Solución:
-
-Verificamos que Podman estaba funcionando:
-
-bashpodman --version
-podman ps  # Ver si el comando básico funciona
-
-Reiniciamos el servicio de Podman (en WSL):
-
-bashpodman machine stop
-podman machine start
-
-Verificamos la versión de podman-compose:
-
-bashpodman-compose --version
-
-Si el problema persistía, actualizamos podman-compose:
-
-bashpip3 install --upgrade podman-compose
-
-Como último recurso, probamos ejecutar con sudo (aunque no es recomendado en rootless):
-
-bashsudo podman-compose up -d
-
-Solución final que funcionó:
-
-Eliminamos configuraciones antiguas que causaban conflictos
-Usamos Podman Desktop para Windows en lugar de WSL puro
-Ejecutamos directamente desde PowerShell
-
-
+Usuario: admin
+Contraseña: adminadmin
 
 Lección aprendida:
-La compatibilidad entre herramientas de contenedores y el sistema operativo host es crucial. Podman en Windows funciona a través de una máquina virtual (Podman Machine), y cualquier problema con esta VM puede causar errores en cascada. Esto nos enseñó sobre las abstracciones del sistema operativo y cómo diferentes capas de software deben comunicarse correctamente.
+El prefijo correcto para las variables de entorno de qBittorrent en la imagen de LinuxServer es  `QBT_`, no solo  `WEBUI_`. Este tipo de detalles específicos de cada imagen se encuentran en su documentación oficial. Además, las variables de entorno deben estar definidas en el archivo  `.env`  para que podman-compose pueda leerlas correctamente.
